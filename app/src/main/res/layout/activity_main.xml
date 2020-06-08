@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".MainActivity">
+
+<!--    <com.example.carl.ui_qq_dragbubble.MessageBubbleView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view"
+        android:text="text_view"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/btButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"
+        android:layout_below="@+id/text_view"
+        android:layout_alignLeft="@+id/text_view"
+        android:background="@color/colorPrimary"
+        />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btButton"
+        android:layout_alignLeft="@+id/text_view"
+        android:src="@mipmap/ic_launcher"
+        />
+
+</RelativeLayout>
