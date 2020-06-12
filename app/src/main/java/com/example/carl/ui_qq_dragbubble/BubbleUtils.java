@@ -19,7 +19,9 @@ public class BubbleUtils {
     private static int dip2px(int dip, Context context) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dip,context.getResources().getDisplayMetrics());
     }
-
+    /**
+     * 通过百分比，获得对应点的位置
+     * **/
     public static PointF getPointByPercent(PointF p1, PointF p2, float percent) {
         return new PointF(evaluateValue(percent,p1.x,p2.x),evaluateValue(percent,p1.y,p2.y));
     }

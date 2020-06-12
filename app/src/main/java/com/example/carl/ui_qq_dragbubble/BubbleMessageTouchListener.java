@@ -85,6 +85,7 @@ public class BubbleMessageTouchListener implements View.OnTouchListener, Message
     @Override
     public void dismiss(PointF position) {
         //执行爆炸动画（帧动画）
+        //移除控件的bitmap
         mWindowManager.removeView(mMessageBubbleView);
         //要在mWindowManager中添加一个爆炸动画
         mWindowManager.addView(mBombFrame,mParams);

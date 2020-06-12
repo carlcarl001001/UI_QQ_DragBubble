@@ -182,13 +182,12 @@ public class MessageBubbleView extends View {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     float percent = (float)animation.getAnimatedValue();
-                    PointF pointF = BubbleUtils.getPointByPercent(start,end,percent);
+                    PointF pointF = BubbleUtils.getPointByPercent(start,end,percent);//通过百分比获得点的位置
                     updateDragPoint(pointF.x,pointF.y);
                 }
             });
             //设置一个插值器 在结束时回弹
             animator.setInterpolator(new OvershootInterpolator(5f));
-            animator.start();
             //还要通知TouchListener移除当前View 然后显示静态的View
             animator.addListener(new AnimatorListenerAdapter() {
                 @Override
@@ -197,7 +196,11 @@ public class MessageBubbleView extends View {
                         mListener.restore();
                     }
                 }
+
             });
+            animator.start();
+
+
 
         }else {
             //爆炸
